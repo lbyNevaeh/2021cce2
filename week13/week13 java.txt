@@ -1,0 +1,115 @@
+///week13_1_text
+
+size(300,300);
+background(#FFFAE8);
+fill(#97C4FA);
+textSize(50);
+text("Hello",50,50);
+
+///week13_2_mouse
+
+void setup(){
+  size(300,300);
+  background(#FFFAE8);
+  fill(#97C4FA);
+  textSize(50);
+}
+void draw(){
+  text("Hello",mouseX,mouseY);
+}
+
+///week13_3_dinner
+
+void setup(){
+  size(300,300);
+  background(#FFFAE8);
+  fill(#97C4FA);
+  textSize(50);
+  textAlign(CENTER,CENTER);
+}
+void draw(){
+  background(#FFFAE8);
+  text("Dinner 1",150,50);
+  text("Dinner 2",150,150);
+  text("Dinner 3",150,250);
+  //test("Hello",mouseX,mouseY);
+}
+
+///week13_4_dinner_mouse
+
+void setup(){
+  size(300,300);
+  background(#FFFAE8);
+  fill(#97C4FA);
+  textSize(50);
+  textAlign(CENTER,CENTER);
+}
+void draw(){
+  background(#FFFAE8);
+  text("Dinner 1",150,50);
+  text("Dinner 2",150,150);
+  text("Dinner 3",150,250);
+  int choice = mouseX % 3;
+  if(choice==0)rect(0,25,50,50);
+  if(choice==1)rect(0,125,50,50);
+  if(choice==2)rect(0,225,50,50);
+}
+
+///week13_5
+
+void setup(){
+  size(300,300);
+  background(#FFFAE8);
+  fill(#97C4FA);
+  textSize(50);
+  textAlign(CENTER,CENTER);
+}
+int choice = -1;
+void draw(){
+  background(#FFFAE8);
+  text("Dinner 1",150,50);
+  text("Dinner 2",150,150);
+  text("Dinner 3",150,250);
+  if(choice==0)ellipse(30,50,50,50);
+  if(choice==1)ellipse(30,150,50,50);
+  if(choice==2)ellipse(30,250,50,50);
+}
+void mousePressed(){
+  choice = int (random(3));
+}
+
+///week13 p5
+
+
+function setup() {
+    initializeFields();
+    createCanvas(300, 300);
+    background(color(0xFF, 0xFA, 0xE8));
+    fill(color(0x97, 0xC4, 0xFA));
+    textSize(50);
+    textAlign(CENTER, CENTER);
+}
+
+var choice;
+
+function draw() {
+    background(color(0xFF, 0xFA, 0xE8));
+    text("Dinner 1", 150, 50);
+    text("Dinner 2", 150, 150);
+    text("Dinner 3", 150, 250);
+    if (choice == 0)
+        ellipse(30, 50, 50, 50);
+    if (choice == 1)
+        ellipse(30, 150, 50, 50);
+    if (choice == 2)
+        ellipse(30, 250, 50, 50);
+}
+
+function mousePressed() {
+    choice = int(random(3));
+}
+
+function initializeFields() {
+    choice = -1;
+}
+
